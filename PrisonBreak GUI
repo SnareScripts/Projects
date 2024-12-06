@@ -1449,13 +1449,6 @@ loadstring(game:HttpGet("https://pastebin.com/raw/5qvC8snF"))()
   	end    
 })
 
-Tab:AddButton({
-	Name = "• Turn off Jump",
-	Callback = function()
-      		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-  	end    
-})
-
 local Tab = Window:MakeTab({
 	Name = "• Player Combat",
 	Icon = "rbxassetid://857927023",
@@ -1463,7 +1456,7 @@ local Tab = Window:MakeTab({
 })
 
 local Section = Tab:AddSection({
-	Name = "Hitbox Feature is (Aimbot), ESP Feature is (Player Sensory Movement)"
+	Name = "Hitbox Feature is (Aimbot), Noclip Feature is (Walk-Thru Walls)"
 })
 
 Tab:AddButton({
@@ -1479,9 +1472,9 @@ loadstring(game:HttpGet("https://pastebin.com/raw/mG37TZ4C"))()
 })
 
 Tab:AddButton({
-	Name = "• ESP",
+	Name = "• No-Clip",
 	Callback = function()
-pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w0lf22/Unnamed-ESP/master/UnnamedESP.lua'))() end)
+loadstring(game:HttpGet("https://pastebin.com/raw/bnRpmvy0"))()
 
 
 
@@ -1489,6 +1482,7 @@ pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/ic3w
       		print("button pressed")
   	end    
 })
+
 
 local Section = Tab:AddSection({
 	Name = "AnimationChanger will NOT save Player Clicked Animation"
@@ -1508,7 +1502,7 @@ loadstring(game:HttpGet("https://pastebin.com/raw/t9EhCsD8"))()
 })
 
 Tab:AddButton({
-	Name = "• Permanent Shiftlock",
+	Name = "• Permanent Shift-lock",
 	Callback = function()
 loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Permanent-Shiftlock-7513"))() 
 
@@ -1880,6 +1874,21 @@ loadstring(game:HttpGet("https://pastebin.com/raw/2iVrLLQp"))()
       		print("button pressed")
   	end    
 })
+
+Tab:AddButton({
+	Name = "• AutoArrest",
+	Callback = function()
+loadstring(game:HttpGet("https://pastebin.com/raw/6a1pjgSc", true))()
+
+
+      		print("button pressed")
+  	end    
+})
+
+local Section = Tab:AddSection({
+	Name = "AutoArrest , is set for Vip7 ONLY"
+})
+
 
 local Tab = Window:MakeTab({
 	Name = "• Armor",
