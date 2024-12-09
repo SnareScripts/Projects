@@ -1875,10 +1875,6 @@ loadstring(game:HttpGet("https://pastebin.com/raw/2iVrLLQp"))()
   	end    
 })
 
-local Section = Tab:AddSection({
-	Name = "AutoArrest , is set for Vip7 ONLY"
-})
-
 Tab:AddButton({
 	Name = "• AutoArrest",
 	Callback = function()
@@ -1888,6 +1884,11 @@ loadstring(game:HttpGet("https://pastebin.com/raw/6a1pjgSc", true))()
       		print("button pressed")
   	end    
 })
+
+local Section = Tab:AddSection({
+	Name = "AutoArrest , is set for Vip7 ONLY"
+})
+
 
 local Tab = Window:MakeTab({
 	Name = "• Armor",
