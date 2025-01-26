@@ -27,7 +27,7 @@ end
 local function getInviteData(sInvite)
     local success, result = pcall(function()
 		return HttpService:JSONDecode(request({
-            Url = "https://discord.gg/v2QAwMZHHG".. getInviteCode(sInvite),
+            Url = "https://ptb.discord.com/api/invites/".. getInviteCode(sInvite),
             Method = "GET"
         }).Body)
 	end)
