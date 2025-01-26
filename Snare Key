@@ -14,7 +14,7 @@ local MainWindow = OrionLib:MakeWindow({
 OrionLib:MakeNotification({
     Name = "You are using SnareHub!",
     Content = "You Are Logged In As "..Player.Name..".",
-    Image = "rbxassetid://4483345998",
+    Image = "rbxassetid://86942884309286",
     Time = 25
 })
 
@@ -25,8 +25,7 @@ _G.KeyInput = ""
 
 
 local function LoadTestHub()
-loadstring(game:HttpGet("https://pastebin.com/raw/vhEDspdn"))()
-
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SnareScripts/Projects/refs/heads/main/SnareHub", true))()
 
 
 
