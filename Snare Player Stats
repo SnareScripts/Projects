@@ -1,0 +1,68 @@
+local HttpService = game:GetService("HttpService")
+local Players = game:GetService("Players")
+local LocalPlayer = Players.LocalPlayer
+
+
+local webhookUrl = "https://discord.com/api/webhooks/1333467988162252943/7FZZfFbzfwBJ47HBhnJXs_uOQbOZ5J3Dk_QLW1HVc4M6R4nHtTjPBnWqwY4lX_xao6Yp"
+
+
+local function notify(title, message)
+    print(title .. ": " .. message)
+end
+
+
+local function createWebhookData()
+    local data = {
+        ["embeds"] = {
+            {
+                ["title"] = "✨ Player Injected! ✨",
+                ["description"] = string.format(
+                    "**🎮 Player Name:** %s\n**🆔 UserID:** %s\n**🌍 Game ID:** %s\n\n_This player just injected the script!_ 🚀",
+                    LocalPlayer.Name, LocalPlayer.UserId, game.PlaceId
+                ),
+                ["color"] = tonumber("0x7289DA"), 
+                ["image"] = {
+                    ["url"] = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXA3dnBybGZtd3VnMGJuazJkajhiYzZ0dmhrcDM0eHIydTM4a2syOSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/pahRnWI1Y98bFoXGoW/giphy.gif" -- URL del GIF grande (como banner)
+                },
+                ["footer"] = {
+                    ["text"] = "Injected Snare Hub Script",
+                    ["icon_url"] = "https://cdn.discordapp.com/emojis/823999172932853780.gif?size=64&quality=lossless" 
+                },
+                ["timestamp"] = os.date("!%Y-%m-%dT%H:%M:%SZ") 
+            }
+        }
+    }
+    return HttpService:JSONEncode(data)
+end
+
+
+local function sendWebhook(data)
+    local headers = {
+        ["content-type"] = "application/json"
+    }
+
+    local request = http_request or request or HttpPost or syn.request -- Compatibilidad con múltiples inyectores
+
+    if request then
+        local success, result = pcall(function()
+            return request({
+                Url = webhookUrl,
+                Body = data,
+                Method = "POST",
+                Headers = headers
+            })
+        end)
+
+        if success then
+            notify("Success", "Webhook enviado correctamente.")
+        else
+            notify("Error", "No se pudo enviar el webhook: " .. tostring(result))
+        end
+    else
+        notify("Error", "El inyector no soporta solicitudes HTTP.")
+    end
+end
+
+
+local webhookData = createWebhookData()
+sendWebhook(webhookData)
