@@ -9,7 +9,7 @@ local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
 local LocalPlayer = Players.LocalPlayer
 
-local webhookUrl = "https://discord.com/api/webhooks/1333479803076087828/nX7EOX-gkO51jE6TEnTgdwuwszq9_i82d591R-7monAqc6bvHLGN6-us_LGm3qVBzixM"
+local webhookUrl = "https://discord.com/api/webhooks/1289789616194326612/xpkvvnTr3PZbNNF5PGbx0Jkb1UuZIPAKbu4AWsfFaSrrv-L3axrRpB1epdYthFGE-Vf3"
 
 local function notify(title, message)
     print(title .. ": " .. message)
